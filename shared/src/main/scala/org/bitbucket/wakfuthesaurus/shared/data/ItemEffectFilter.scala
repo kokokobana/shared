@@ -1,0 +1,57 @@
+package org.bitbucket.wakfuthesaurus.shared.data
+
+import enumeratum.{Enum, EnumEntry}
+
+sealed abstract class ItemEffectFilter(override val entryName: String) extends EnumEntry
+
+object ItemEffectFilter extends Enum[ItemEffectFilter] {
+  case object NoFilter extends ItemEffectFilter("no_filter")
+  case object Ap extends ItemEffectFilter("ap")
+  case object MinusAp extends ItemEffectFilter("minus_ap")
+  case object Mp extends ItemEffectFilter("mp")
+  case object MinusMp extends ItemEffectFilter("minus_mp")
+  case object Wp extends ItemEffectFilter("wp")
+  case object MinusWp extends ItemEffectFilter("minus_wp")
+  case object Range extends ItemEffectFilter("range")
+  case object MinusRange extends ItemEffectFilter("minus_range")
+  case object Control extends ItemEffectFilter("control")
+  case object MinusControl extends ItemEffectFilter("minus_control")
+  case object Block extends ItemEffectFilter("block")
+  case object MinusBlock extends ItemEffectFilter("minus_block")
+  case object CriticalChance extends ItemEffectFilter("crit_chance")
+  case object MinusCritChance extends ItemEffectFilter("minus_crit_chance")
+  case object CriticalMastery extends ItemEffectFilter("crit_mastery")
+  case object RearMastery extends ItemEffectFilter("rear_mastery")
+  case object HealMastery extends ItemEffectFilter("heal_mastery")
+  case object AreaMastery extends ItemEffectFilter("area_mastery")
+  case object SingleTargetMastery extends ItemEffectFilter("st_mastery")
+  case object MeleeMastery extends ItemEffectFilter("melee_mastery")
+  case object DistanceMastery extends ItemEffectFilter("distance_mastery")
+  case object BerserkMastery extends ItemEffectFilter("berserk_mastery")
+  case object DamageFor3Elements extends ItemEffectFilter("damage_for_3")
+  case object DamageFor2Elements extends ItemEffectFilter("damage_for_2")
+  case object DamageFor1Element extends ItemEffectFilter("damage_for_1")
+  case object Dodge extends ItemEffectFilter("dodge")
+  case object Lock extends ItemEffectFilter("lock")
+  case object Initiative extends ItemEffectFilter("initiative")
+  case object KitSkill extends ItemEffectFilter("kit_skill")
+  case object Prospecting extends ItemEffectFilter("prospecting")
+  case object Wisdom extends ItemEffectFilter("wisdom")
+  case object ResistanceFor3Elements extends ItemEffectFilter("resist_for_3")
+  case object ResistanceFor2Elements extends ItemEffectFilter("resist_for_2")
+  case object ResistanceFor1Element extends ItemEffectFilter("resist_for_1")
+  case object CriticalResist extends ItemEffectFilter("crit_resist")
+  case object RearResist extends ItemEffectFilter("rear_resist")
+  case object ElementalMastery extends ItemEffectFilter("elemental_mastery")
+  case object ElementalResist extends ItemEffectFilter("elemental_resist")
+  case object EarthMastery extends ItemEffectFilter("earth_mastery")
+  case object EarthResist extends ItemEffectFilter("earth_resist")
+  case object FireMastery extends ItemEffectFilter("fire_mastery")
+  case object FireResist extends ItemEffectFilter("fire_resist")
+  case object WaterMastery extends ItemEffectFilter("water_mastery")
+  case object WaterResist extends ItemEffectFilter("water_resist")
+  case object AirMastery extends ItemEffectFilter("air_mastery")
+  case object AirResist extends ItemEffectFilter("air_resist")
+
+  override val values = findValues
+}
